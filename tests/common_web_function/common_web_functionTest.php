@@ -17,6 +17,6 @@ class CommonWebFunctionTest extends TestCase
 
     public function testFunc() {
         $this->cwf = new CommonWebFunction;
-        $this->assertEquals( $this->cwf->normalize_str(" ＡB　ｳﾞｧｶでぇ１     ") , "ab ヴァカでぇ1");
+        $this->assertEquals( $this->cwf->normalize_str(" Ａ          B　ｳﾞｧｶでぇ１     ") , "a b ヴァカでぇ1");
     }
 }

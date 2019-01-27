@@ -9,15 +9,15 @@ class CommonWebFunction
 {
 	public function __construct($op = null) 
 	{
-	}
+    }
 
-	public function normalize_jp_str($str) {
-        return strtolower(trim(mb_convert_kana($str, "KVas")));
+	public function normalize_str($str) {
+        return $this->remove_successive_spaces(strtolower(trim(mb_convert_kana($str, "KVas"))));
     }
     
-	public function normalize_str($str) {
-        return strtolower(trim($this->normalize_jp_str($str)));
-	}
+    public function remove_successive_spaces($str) {
+        return preg_replace('/ +/', ' ', $str);
+    }
 }
 
 if (empty(debug_backtrace())) {
