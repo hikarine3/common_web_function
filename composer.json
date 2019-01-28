@@ -12,8 +12,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Hikarine3\\CommonWebFunction\\": "src/common_web_function.php",
-            "Hikarine3\\Tests\\": "tests/common_web_function/common_web_functionTest.php"
+            "Hikarine3\\CommonWebFunction\\": "src/CommonWebFunction.php",
+            "Hikarine3\\Tests\\": "tests/CommonWebFunction/CommonWebFunctionTest.php"
         }
     },
     "require": {
